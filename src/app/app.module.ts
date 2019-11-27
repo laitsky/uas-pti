@@ -9,6 +9,7 @@ import { UserListComponent } from './user-list/user-list.component';
 import { UserDetailComponent } from './user-detail/user-detail.component';
 import { ProfilKelompokComponent } from './profil-kelompok/profil-kelompok.component';
 import { RegisterComponent } from './register/register.component';
+import { ErrorPageComponent } from './error-page/error-page.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { RegisterComponent } from './register/register.component';
     UserListComponent,
     UserDetailComponent,
     ProfilKelompokComponent,
-    RegisterComponent
+    RegisterComponent,
+    ErrorPageComponent
   ],
   imports: [
     BrowserModule,
