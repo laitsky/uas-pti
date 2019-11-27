@@ -1,0 +1,17 @@
+<div>
+    <h3>Daftar Mahasiswa</h3>
+    <table>
+        <thead>
+            <tr>
+                <th scope="col">NIM</th>
+                <th scope="col">Nama</th>
+            </tr>
+        </thead>
+        <tbody *ngIf="mahasiswa != null">
+            <tr *ngFor="let mhs of mahasiswa.result.mahasiswa" routerLink="./{{mhs.nim}}">
+            <th scope="row">{{mhs.nim}}</th>
+            <td>{{mhs.nama_lengkap}}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
