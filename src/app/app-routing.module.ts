@@ -31,7 +31,7 @@ const routes: Routes = [
     component: MahasiswaListComponent
   },
   {
-    path: "mahasiswa-detail",
+    path: "mahasiswa/:nim",
     component: MahasiswaDetailComponent
   },
   {
