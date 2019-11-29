@@ -13,7 +13,7 @@ import { FooterComponent } from './_shared/components/footer/footer.component';
 import { MahasiswaListComponent } from './mahasiswa-list/mahasiswa-list.component';
 import { MahasiswaDetailComponent } from './mahasiswa-detail/mahasiswa-detail.component';
 import { HttpClientModule } from '@angular/common/http';
-
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations'
 @NgModule({
   declarations: [
     AppComponent,
@@ -30,7 +30,8 @@ import { HttpClientModule } from '@angular/common/http';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

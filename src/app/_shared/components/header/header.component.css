@@ -1,0 +1,13 @@
+.navbar-brand {
+    padding-right: 3.5em;
+}
+.nav-item {
+    padding-right: 3em;
+}
+a.text-white {
+    font-weight: bold;
+    filter: brightness(85%);
+}
+a.text-white:hover {
+    filter: brightness(100%);
+}
