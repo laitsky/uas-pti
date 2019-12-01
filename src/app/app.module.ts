@@ -13,7 +13,8 @@ import { FooterComponent } from './_shared/components/footer/footer.component';
 import { MahasiswaListComponent } from './mahasiswa-list/mahasiswa-list.component';
 import { MahasiswaDetailComponent } from './mahasiswa-detail/mahasiswa-detail.component';
 import { HttpClientModule } from '@angular/common/http';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations'
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { FormsModule } from '@angular/forms';
 @NgModule({
   declarations: [
     AppComponent,
@@ -25,13 +26,14 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations'
     HeaderComponent,
     FooterComponent,
     MahasiswaListComponent,
-    MahasiswaDetailComponent
+    MahasiswaDetailComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

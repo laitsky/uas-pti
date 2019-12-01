@@ -1,29 +1,10 @@
-<!--<div class="container table-responsive">
-  <div class="w-75 mx-auto">
-    <h3 class="pt-4 pb-3">Daftar Mahasiswa</h3>
-    <table class="table table-hover">
-      <thead class="thead-light">
-        <tr>
-          <th scope="col" class="text-center">NIM</th>
-          <th scope="col" class="text-center">Nama</th>
-        </tr>
-      </thead>
-      <tbody *ngIf="mahasiswa != null">
-        <tr *ngFor="let mhs of mahasiswa.result.mahasiswa" routerLink="./{{mhs.nim}}">
-          <th scope="row" class="text-center">000000{{mhs.nim}}</th>
-          <td class="text-center">{{mhs.nama_lengkap}}</td>
-        </tr>
-      </tbody>
-    </table>
-  </div>
-</div>-->
 <div class="pt-3 px-5 mx-5 text-center">
   <h1>Daftar Mahasiswa</h1>
   <h5>Klik untuk melihat informasi lebih detail</h5>
 </div>
 <div class="row pb-5 my-5 px-5 mx-5">
   <div class="col-6" *ngFor="let mhs of mahasiswa.result.mahasiswa">
-    <div class="media my-2 border rounded-lg card-effect bg-light" routerLink="./{{mhs.nim}}">
+    <div id="mahasiswa-card" class="media my-2 border rounded-lg card-effect bg-light mx-5" routerLink="./{{mhs.nim}}">
       <img class="mr-3 img-fluid rounded img-thumbnail" src="{{mhs.foto}}" alt="Foto profil">
       <div class="media-body px-1 my-1">
         <h3 class="pt-1">{{mhs.nama_lengkap}}</h3>

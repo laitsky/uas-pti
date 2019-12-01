@@ -10,4 +10,5 @@ a.text-white {
 }
 a.text-white:hover {
     filter: brightness(100%);
+    transition: 0.3s;
 }

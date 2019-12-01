@@ -1,23 +1,19 @@
-table tbody:hover {
-    cursor: pointer;
-}
-
 .media:hover {
-    cursor: pointer;
+  cursor: pointer;
 }
 
 img {
-    width: 115px;
-    height: 115px;
-    object-fit: cover;
+  width: 115px;
+  height: 115px;
+  object-fit: cover;
 }
 
 .card-effect {
-    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
-    transition: 0.3s;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  transition: 0.2s;
 }
 
 .card-effect:hover {
-    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
-    transform: translateY(-0.75em);
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+  transform: translateY(-0.75em);
 }

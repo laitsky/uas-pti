@@ -1,0 +1,58 @@
+#particles-js {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  animation: warnaDinamis 7.5s;
+  -webkit-animation: warnaDinamis 7.5s;
+  animation-iteration-count: infinite;
+  -webkit-animation-iteration-count: infinite;
+  background-size: cover;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+}
+
+.center-text {
+  position: absolute;
+  width: 100px;
+  height: 50px;
+  top: 50%;
+  left: 50%;
+  margin-left: -50px; /* margin is -0.5 * dimension */
+  margin-top: -25px;
+}
+
+@keyframes warnaDinamis {
+  0% {
+    background-color: #b4b387;
+  }
+  25% {
+    background-color: #eeddcc;
+  }
+  50% {
+    background-color: #778aab;
+  }
+  75% {
+    background-color: #bcaaaa;
+  }
+  100% {
+    background-color: #ddbb98;
+  }
+}
+
+@-webkit-keyframes warnaDinamis {
+  0% {
+    background-color: #b4b387;
+  }
+  25% {
+    background-color: #eeddcc;
+  }
+  50% {
+    background-color: #778aab;
+  }
+  75% {
+    background-color: #bcaaaa;
+  }
+  100% {
+    background-color: #ddbb98;
+  }
+}
