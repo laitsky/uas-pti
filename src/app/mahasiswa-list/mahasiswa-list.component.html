@@ -2,7 +2,7 @@
   <h1>Daftar Mahasiswa</h1>
   <h5>Klik untuk melihat informasi lebih detail</h5>
 </div>
-<div class="row pb-5 my-5 px-5 mx-5">
+<div class="row pb-5 my-5 px-5 mx-5" *ngIf="mahasiswa">
   <div class="col-6" *ngFor="let mhs of mahasiswa.result.mahasiswa">
     <div id="mahasiswa-card" class="media my-2 border rounded-lg card-effect bg-light mx-5" routerLink="./{{mhs.nim}}">
       <img class="mr-3 img-fluid rounded img-thumbnail" src="{{mhs.foto}}" alt="Foto profil">

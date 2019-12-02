@@ -15,6 +15,7 @@ import { MahasiswaDetailComponent } from './mahasiswa-detail/mahasiswa-detail.co
 import { HttpClientModule } from '@angular/common/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FormsModule } from '@angular/forms';
+import { MahasiswaListTableComponent } from './mahasiswa-list-table/mahasiswa-list-table.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -27,6 +28,7 @@ import { FormsModule } from '@angular/forms';
     FooterComponent,
     MahasiswaListComponent,
     MahasiswaDetailComponent,
+    MahasiswaListTableComponent,
   ],
   imports: [
     BrowserModule,
