@@ -16,6 +16,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FormsModule } from '@angular/forms';
 import { MahasiswaListTableComponent } from './mahasiswa-list-table/mahasiswa-list-table.component';
+import { MahasiswaHeaderComponent } from './_shared/components/mahasiswa-header/mahasiswa-header.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -29,6 +30,7 @@ import { MahasiswaListTableComponent } from './mahasiswa-list-table/mahasiswa-li
     MahasiswaListComponent,
     MahasiswaDetailComponent,
     MahasiswaListTableComponent,
+    MahasiswaHeaderComponent,
   ],
   imports: [
     BrowserModule,
