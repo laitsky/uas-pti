@@ -1,10 +1,18 @@
-<div class="row pb-5 my-5 px-5 mx-5" *ngIf="mahasiswa">
+<div class="row pb-5 my-4 px-5 mx-5" *ngIf="mahasiswa">
   <div class="col-6" *ngFor="let mhs of mahasiswa.result.mahasiswa">
-    <div id="mahasiswa-card" class="media my-2 border rounded-lg card-effect bg-light mx-5" routerLink="./{{mhs.nim}}">
-      <img class="mr-3 img-fluid rounded img-thumbnail" src="{{mhs.foto}}" alt="Foto profil">
+    <div
+      id="mahasiswa-card"
+      class="media my-2 border rounded-lg card-effect bg-light mx-5"
+      routerLink="./{{ mhs.nim }}"
+    >
+      <img
+        class="mr-3 img-fluid rounded img-thumbnail"
+        src="{{ mhs.foto }}"
+        alt="Foto profil"
+      />
       <div class="media-body px-1 my-1">
-        <h3 class="pt-1">{{mhs.nama_lengkap}}</h3>
-        <h5 class="pt-2">000000{{mhs.nim}}</h5>
+        <h3 class="pt-1">{{ mhs.nama_lengkap }}</h3>
+        <h5 class="pt-2">000000{{ mhs.nim }}</h5>
       </div>
     </div>
   </div>

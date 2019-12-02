@@ -36,6 +36,10 @@ const routes: Routes = [
     component: MahasiswaListTableComponent
   },
   {
+    path: "mahasiswa-tabel/:nim",
+    redirectTo: "mahasiswa/:nim"
+  },
+  {
     path: "mahasiswa/:nim",
     component: MahasiswaDetailComponent
   },

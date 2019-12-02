@@ -1,7 +1,6 @@
 import { Component, OnInit } from "@angular/core";
 import { MahasiswaList } from "../_shared/models/mahasiswa-list";
 import { PelayanApiService } from "../_shared/services/pelayan-api.service";
-
 @Component({
   selector: "app-mahasiswa-list",
   templateUrl: "./mahasiswa-list.component.html",
