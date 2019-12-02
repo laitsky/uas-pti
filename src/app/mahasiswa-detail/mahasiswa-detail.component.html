@@ -1,6 +1,8 @@
 <div class="container-fluid" *ngIf="mahasiswa != null">
   <img src="{{mahasiswa.result.foto}}" class="img-fluid mx-auto img-thumbnail d-block mt-5 mb-3" id="foto-profil">
-  <h1 class="text-center mb-2">{{mahasiswa.result.nama_lengkap}} <!--<span class="edit-badge">edit</span>--> </h1>
+  <h1 class="text-center mb-2">{{mahasiswa.result.nama_lengkap}}
+    <!--<span class="edit-badge">edit</span>-->
+  </h1>
   <h3 class="text-center mb-5">000000{{mahasiswa.result.nim}}</h3>
   <div class="row mb-4 pb-4 mx-5 px-5">
     <div class="col-md-4 text-center">
@@ -10,7 +12,7 @@
     <div class="col-md-4 text-center">
       <h5>Created at:</h5>
       <h5>{{mahasiswa.result.created_at | date:'medium'}}</h5>
-      
+
     </div>
     <div class="col-md-4 text-center">
       <h5>Updated at:</h5>

@@ -7,7 +7,7 @@ import { MahasiswaListComponent } from "./mahasiswa-list/mahasiswa-list.componen
 import { MahasiswaDetailComponent } from "./mahasiswa-detail/mahasiswa-detail.component";
 import { ProfilKelompokComponent } from "./profil-kelompok/profil-kelompok.component";
 import { ErrorPageComponent } from "./error-page/error-page.component";
-import { MahasiswaListTableComponent } from './mahasiswa-list-table/mahasiswa-list-table.component';
+import { MahasiswaListTableComponent } from "./mahasiswa-list-table/mahasiswa-list-table.component";
 
 const routes: Routes = [
   {
