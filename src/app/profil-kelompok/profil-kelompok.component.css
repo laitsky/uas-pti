@@ -36,7 +36,7 @@ div.profile-text h4 {
 }
 
 .col-3:hover > div.profile-text {
-  color: rgba(220, 220, 220, 0.9);
+  color: rgba(245, 245, 245, 0.9);
   transition: all 0.2s ease-in-out;
 }
 

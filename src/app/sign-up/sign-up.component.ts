@@ -1,5 +1,6 @@
 import { Component, OnInit } from "@angular/core";
-import { FormBuilder, FormsModule } from '@angular/forms';
+import { FormBuilder, FormsModule } from "@angular/forms";
+declare var particlesJS: any;
 @Component({
   selector: "app-sign-up",
   templateUrl: "./sign-up.component.html",
@@ -9,8 +10,7 @@ export class SignUpComponent implements OnInit {
   constructor() {}
 
   ngOnInit() {
+    particlesJS.load('particles-js', 'assets/SignUpParticles.json', null);
   }
-  signUp() {
-    
-  }
+  signUp() {}
 }

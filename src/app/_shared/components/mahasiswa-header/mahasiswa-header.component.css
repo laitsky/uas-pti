@@ -1,7 +1,9 @@
 #content {
-  background-color: rgb(230, 230, 230);
-  padding-bottom: 2.0em;
+  background-image: linear-gradient(rgb(134, 147, 181), rgb(184, 189, 204));
+  padding-bottom: 2em;
+  color: white;
 }
+
 .wrap {
   padding-top: 0.5em;
   height: 100%;
@@ -36,7 +38,7 @@
 
 .button-active {
   background-color: #2ec3e5;
-  box-shadow: 0 15px 20px rgba(46, 195, 229, 0.4) ;
+  box-shadow: 0 15px 20px rgba(46, 195, 229, 0.4);
   color: #fff;
   font-weight: 850;
 }

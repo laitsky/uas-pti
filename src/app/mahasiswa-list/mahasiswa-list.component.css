@@ -1,5 +1,6 @@
-#particles-js {
-  background-color: #6b6b78;
+
+#tbl-container {
+  padding-top: 3em;
 }
 .media:hover {
   cursor: pointer;

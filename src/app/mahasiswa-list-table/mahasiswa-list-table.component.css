@@ -1,3 +1,12 @@
-table tbody th:hover {
-    cursor: pointer;
+
+
+table tbody:hover {
+  cursor: pointer;
+}
+
+table tbody {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: aliceblue;
+  opacity: 0.75;
+  font-weight: 650;
 }
