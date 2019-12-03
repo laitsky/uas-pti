@@ -1,1 +1,13 @@
-<p>login works!</p>
+<div class="container p-5" id="login-container">
+    <h1>Masuk</h1>
+    <form class="p-3">
+        <div class="form-group">
+            <label for="user_name">Username</label>
+            <input type="text" class="form-control" id="user_name" [(ngModel)]="user_name" placeholder="Masukkan username" name="user_name">
+        </div>
+        <div class="form-group">
+            <label for="password">Password</label>
+            <input type="password" class="form-control" id="password" [(ngModel)]="password" placeholder="Masukkan password" name="password">
+        </div>
+    </form>
+</div>

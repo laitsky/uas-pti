@@ -6,7 +6,6 @@ import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
 import { LoginComponent } from './login/login.component';
 import { ProfilKelompokComponent } from './profil-kelompok/profil-kelompok.component';
-import { RegisterComponent } from './register/register.component';
 import { ErrorPageComponent } from './error-page/error-page.component';
 import { HeaderComponent } from './_shared/components/header/header.component';
 import { FooterComponent } from './_shared/components/footer/footer.component';
@@ -17,13 +16,13 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FormsModule } from '@angular/forms';
 import { MahasiswaListTableComponent } from './mahasiswa-list-table/mahasiswa-list-table.component';
 import { MahasiswaHeaderComponent } from './_shared/components/mahasiswa-header/mahasiswa-header.component';
+import { SignUpComponent } from './sign-up/sign-up.component';
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
     LoginComponent,
     ProfilKelompokComponent,
-    RegisterComponent,
     ErrorPageComponent,
     HeaderComponent,
     FooterComponent,
@@ -31,6 +30,7 @@ import { MahasiswaHeaderComponent } from './_shared/components/mahasiswa-header/
     MahasiswaDetailComponent,
     MahasiswaListTableComponent,
     MahasiswaHeaderComponent,
+    SignUpComponent,
   ],
   imports: [
     BrowserModule,

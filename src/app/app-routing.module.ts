@@ -2,17 +2,17 @@ import { NgModule } from "@angular/core";
 import { Routes, RouterModule } from "@angular/router";
 import { HomeComponent } from "./home/home.component";
 import { LoginComponent } from "./login/login.component";
-import { RegisterComponent } from "./register/register.component";
 import { MahasiswaListComponent } from "./mahasiswa-list/mahasiswa-list.component";
 import { MahasiswaDetailComponent } from "./mahasiswa-detail/mahasiswa-detail.component";
 import { ProfilKelompokComponent } from "./profil-kelompok/profil-kelompok.component";
 import { ErrorPageComponent } from "./error-page/error-page.component";
 import { MahasiswaListTableComponent } from "./mahasiswa-list-table/mahasiswa-list-table.component";
+import { SignUpComponent } from './sign-up/sign-up.component';
 
 const routes: Routes = [
   {
     path: "",
-    redirectTo: "home",
+    redirectTo: "/home",
     pathMatch: "full"
   },
   {
@@ -24,8 +24,8 @@ const routes: Routes = [
     component: LoginComponent
   },
   {
-    path: "register",
-    component: RegisterComponent
+    path: "signup",
+    component: SignUpComponent
   },
   {
     path: "mahasiswa",
@@ -37,7 +37,7 @@ const routes: Routes = [
   },
   {
     path: "mahasiswa-tabel/:nim",
-    redirectTo: "mahasiswa/:nim"
+    redirectTo: "/mahasiswa/:nim"
   },
   {
     path: "mahasiswa/:nim",
@@ -53,8 +53,8 @@ const routes: Routes = [
   },
   {
     path: "**",
-    redirectTo: "404"
-  }
+    redirectTo: "/404"
+  },
 ];
 
 @NgModule({
