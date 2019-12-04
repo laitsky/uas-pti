@@ -1,8 +1,8 @@
 import { Component, OnInit } from "@angular/core";
 import { FormBuilder, FormsModule } from "@angular/forms";
-import { HttpClient, HttpHeaders } from '@angular/common/http';
-import { Router } from '@angular/router';
-import { SHA512 } from 'crypto-js';
+import { HttpClient, HttpHeaders } from "@angular/common/http";
+import { Router } from "@angular/router";
+import { SHA512 } from "crypto-js";
 
 declare var particlesJS: any;
 @Component({
@@ -11,7 +11,6 @@ declare var particlesJS: any;
   styleUrls: ["./sign-up.component.css"]
 })
 export class SignUpComponent implements OnInit {
- 
   username: string;
   telepon: string;
   email: string;
@@ -22,37 +21,39 @@ export class SignUpComponent implements OnInit {
   password: string;
 
   httpOptions = {
-    headers: new HttpHeaders({ "Content-Type": "application/json "})
+    headers: new HttpHeaders({ "Content-Type": "application/json " })
   };
 
-  constructor(
-    private http: HttpClient,
-    private router: Router
-  ) {}
+  constructor(private http: HttpClient, private router: Router) {}
 
   ngOnInit() {
     particlesJS.load("particles-js", "assets/SignUpParticles.json", null);
   }
 
-  signUp(){
-    this.http.post('http://umn-pti2019.herokuapp.com/api/register', {
-      "user_name": this.username,
-      "telepon": this.telepon,
-      "email": this.email,
-      "nama_lengkap": this.nama_lengkap,
-      "alamat": this.alamat,
-      "tanggal_lahir": this.tanggal_lahir,
-      "foto": this.foto,
-      "password": SHA512(this.password).toString()
-    }, this.httpOptions
-    ).subscribe(
-      (response) => {
-        if(response['token'] != null){
-          localStorage.setItem('uas-pti-token', response['token']);
-          this.router.navigate(['home']);
-        } 
-      },
-      (error) => alert(error.error.info)
-    )
+  signUp() {
+    this.http
+      .post(
+        "http://umn-pti2019.herokuapp.com/api/register",
+        {
+          user_name: this.username,
+          telepon: this.telepon,
+          email: this.email,
+          nama_lengkap: this.nama_lengkap,
+          alamat: this.alamat,
+          tanggal_lahir: this.tanggal_lahir,
+          foto: this.foto,
+          password: SHA512(this.password).toString()
+        },
+        this.httpOptions
+      )
+      .subscribe(
+        response => {
+          if (response["token"] != null) {
+            localStorage.setItem("uas-pti-token", response["token"]);
+            this.router.navigate(["/login"]);
+          }
+        },
+        error => alert(error.error.info)
+      );
   }
 }
