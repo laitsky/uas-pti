@@ -21,4 +21,52 @@ export class PelayanApiService {
       `${this.API_URL}/api/mahasiswa/${nim}`
     );
   }
+
+  /* HTTP GET REQUEST BERDASARKAN SORTING DAN ORDER */
+  sortByNameAsc(): Observable<MahasiswaList> {
+    return this.HTTP.get<MahasiswaList>(
+      `${this.API_URL}/api/mahasiswa?sort=nama_lengkap&order=asc`
+    );
+  }
+  sortByNameDesc(): Observable<MahasiswaList> {
+    return this.HTTP.get<MahasiswaList>(
+      `${this.API_URL}/api/mahasiswa?sort=nama_lengkap&order=desc`
+    );
+  }
+
+  sortByNimAsc(): Observable<MahasiswaList> {
+    return this.HTTP.get<MahasiswaList>(
+      `${this.API_URL}/api/mahasiswa?sort=nim&order=asc`
+    );
+  }
+
+  sortByNimDesc(): Observable<MahasiswaList> {
+    return this.HTTP.get<MahasiswaList>(
+      `${this.API_URL}/api/mahasiswa?sort=nim&order=desc`
+    );
+  }
+
+  sortByIdAsc(): Observable<MahasiswaList> {
+    return this.HTTP.get<MahasiswaList>(
+      `${this.API_URL}/api/mahasiswa?sort=id&order=asc`
+    );
+  }
+
+  sortByIdDesc(): Observable<MahasiswaList> {
+    return this.HTTP.get<MahasiswaList>(
+      `${this.API_URL}/api/mahasiswa?sort=id&order=desc`
+    );
+  }
+
+  sortByCreatedAsc(): Observable<MahasiswaList> {
+    return this.HTTP.get<MahasiswaList>(
+      `${this.API_URL}/api/mahasiswa?sort=created_at&order=asc`
+    );
+  }
+
+  sortByCreatedDesc(): Observable<MahasiswaList> {
+    return this.HTTP.get<MahasiswaList>(
+      `${this.API_URL}/api/mahasiswa?sort=created_at&order=desc`
+    );
+  }
 }

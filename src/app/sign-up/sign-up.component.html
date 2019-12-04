@@ -44,7 +44,14 @@
           <input type="text" class="form-control" id="foto" [(ngModel)]="foto" placeholder="Masukkan link foto"
             name="foto">
         </div>
-        <input type="submit" class="btn btn-outline-primary btn-lg btn-block" value="Sign Up!" (click)="signUp()">
+        <div class="row">
+          <div class="col-md-4">
+            <button class="btn btn-block btn-outline-success btn-lg" routerLink="/login">Back</button>
+          </div>
+          <div class="col-md-8">
+            <button class="btn btn-block btn-outline-primary btn-lg" (click)="signUp()">Sign Up!</button>
+          </div>
+        </div>
       </div>
     </form>
   </div>

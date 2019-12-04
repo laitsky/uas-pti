@@ -1,6 +1,22 @@
 <div id="mhs-table-view">
   <div class="container table-responsive">
     <div class="w-75 mx-auto">
+      <div class="dropdown">
+        <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown"
+          aria-haspopup="true" aria-expanded="false">
+          Urutkan berdasarkan...
+        </button>
+        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+          <button class="dropdown-item" (click)="sortByIdAsc()">ID (Naik)</button>
+          <button class="dropdown-item" (click)="sortByIdDesc()">ID (Turun)</button>
+          <button class="dropdown-item" (click)="sortByNameAsc()">Nama (Naik)</button>
+          <button class="dropdown-item" (click)="sortByNameDesc()">Nama (Turun)</button>
+          <button class="dropdown-item" (click)="sortByNimAsc()">NIM (Naik)</button>
+          <button class="dropdown-item" (click)="sortByNimDesc()">NIM (Turun)</button>
+          <button class="dropdown-item" (click)="sortByCreatedAsc()">Waktu Pembuatan (Naik)</button>
+          <button class="dropdown-item" (click)="sortByCreatedDesc()">Waktu Pembuatan (Turun)</button>
+        </div>
+      </div>
       <table class="table table-hover my-5">
         <thead class="thead-dark">
           <tr>

@@ -7,7 +7,7 @@ import { Router } from "@angular/router";
   styleUrls: ["./profil-kelompok.component.css"]
 })
 export class ProfilKelompokComponent implements OnInit {
-  constructor(private location: Location, private _router: Router) {}
+  constructor(private location: Location) {}
 
   ngOnInit() {}
   goBack(): void {
