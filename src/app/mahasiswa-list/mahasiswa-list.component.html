@@ -1,21 +1,23 @@
 <div id="content">
-  <div class="dropdown">
-    <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown"
-      aria-haspopup="true" aria-expanded="false">
-      Urutkan berdasarkan...
-    </button>
-    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-      <button class="dropdown-item" (click)="sortByIdAsc()">ID (Naik)</button>
-      <button class="dropdown-item" (click)="sortByIdDesc()">ID (Turun)</button>
-      <button class="dropdown-item" (click)="sortByNameAsc()">Nama (Naik)</button>
-      <button class="dropdown-item" (click)="sortByNameDesc()">Nama (Turun)</button>
-      <button class="dropdown-item" (click)="sortByNimAsc()">NIM (Naik)</button>
-      <button class="dropdown-item" (click)="sortByNimDesc()">NIM (Turun)</button>
-      <button class="dropdown-item" (click)="sortByCreatedAsc()">Waktu Pembuatan (Naik)</button>
-      <button class="dropdown-item" (click)="sortByCreatedDesc()">Waktu Pembuatan (Turun)</button>
-    </div>
-  </div>
   <div class="row pb-5 px-5 mx-5" *ngIf="mahasiswa" id="tbl-container">
+    <div class="col-12">
+      <div class="dropdown mb-3">
+        <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown"
+          aria-haspopup="true" aria-expanded="false">
+          Urutkan berdasarkan...
+        </button>
+        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+          <button class="dropdown-item" (click)="sortByIdAsc()">ID (<em>Ascending</em>)</button>
+          <button class="dropdown-item" (click)="sortByIdDesc()">ID (<em>Descending</em>)</button>
+          <button class="dropdown-item" (click)="sortByNameAsc()">Nama (A-Z)</button>
+          <button class="dropdown-item" (click)="sortByNameDesc()">Nama (Z-A)</button>
+          <button class="dropdown-item" (click)="sortByNimAsc()">NIM (<em>Ascending</em>)</button>
+          <button class="dropdown-item" (click)="sortByNimDesc()">NIM (<em>Descending</em>)</button>
+          <button class="dropdown-item" (click)="sortByCreatedAsc()">Waktu Pembuatan (<em>Ascending</em>)</button>
+          <button class="dropdown-item" (click)="sortByCreatedDesc()">Waktu Pembuatan (<em>Descending</em>)</button>
+        </div>
+      </div>
+    </div>
     <div class="col-6" *ngFor="let mhs of mahasiswa.result.mahasiswa">
       <div id="mahasiswa-card" class="media my-2 border rounded-lg card-effect bg-light mx-5"
         routerLink="./{{ mhs.nim }}">

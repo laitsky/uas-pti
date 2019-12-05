@@ -1,7 +1,7 @@
-
 #tbl-container {
   padding-top: 3em;
 }
+
 .media:hover {
   cursor: pointer;
 }
@@ -20,4 +20,9 @@ img {
 .card-effect:hover {
   box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
   transform: translateY(-0.75em);
+}
+
+.dropdown {
+  float: right;
+  margin-right: 3em;
 }
