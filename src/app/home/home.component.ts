@@ -19,10 +19,7 @@ export class HomeComponent implements OnInit {
     console.log(username);
     this.currUsername = username;
     this.pelayan.getLoginUsername(this.currUsername).subscribe(
-      result => {
-        this.user = result;
-        console.log(this.user);
-      },
+      result => (this.user = result),
       error => console.log(error)
     );
   }
