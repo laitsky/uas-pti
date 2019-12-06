@@ -3,8 +3,8 @@ table tbody:hover {
 }
 
 table tbody {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-family: 'Roboto', sans-serif;
   background-color: aliceblue;
   opacity: 0.75;
-  font-weight: 650;
+  font-weight: 550;
 }

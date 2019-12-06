@@ -26,8 +26,8 @@
         </thead>
         <tbody *ngIf="mahasiswa">
           <tr *ngFor="let mhs of mahasiswa.result.mahasiswa" routerLink="./{{mhs.nim}}">
-            <th scope="row" class="text-center">000000{{mhs.nim}}</th>
-            <td class="text-center">{{mhs.nama_lengkap}}</td>
+            <th scope="row" class="text-center">000000{{ mhs.nim }}</th>
+            <td class="text-center">{{ mhs.nama_lengkap }} (ID: {{ mhs.id }})</td>
           </tr>
         </tbody>
       </table>

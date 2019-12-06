@@ -13,12 +13,10 @@
 
 #content {
   border-radius: 5px;
-
   padding: 2em;
   position: fixed;
   top: 30%;
   left: 5%;
-
 }
 
 #content h1 {
@@ -29,11 +27,13 @@
   font-size: 7em;
   padding-bottom: 0.5rem;
 }
+
 #content h2 {
   font-family: "Quicksand", Arial, Helvetica, sans-serif;
   color: #424242;
   padding-bottom: 1em;
 }
+
 .wrap {
   height: 100%;
   display: flex;
@@ -42,7 +42,7 @@
 .button {
   width: 200px;
   height: 45px;
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
   font-size: 11px;
   text-transform: uppercase;
   letter-spacing: 2.5px;
@@ -55,27 +55,32 @@
   transition: all 0.3s ease 0s;
   cursor: pointer;
   outline: none;
-  }
+}
 
 .button:hover {
-  background-color: #2EE59D;
+  background-color: #2ee59d;
   box-shadow: 0px 15px 20px rgba(46, 229, 157, 0.4);
   color: #fff;
   transform: translateY(-7px);
 }
+
 @keyframes warnaDinamis {
   0% {
     background-color: #b4b387;
   }
+
   25% {
     background-color: #eeddcc;
   }
+
   50% {
     background-color: #778aab;
   }
+
   75% {
     background-color: #bcaaaa;
   }
+
   100% {
     background-color: #ddbb98;
   }
@@ -85,15 +90,19 @@
   0% {
     background-color: #b4b387;
   }
+
   25% {
     background-color: #eeddcc;
   }
+
   50% {
     background-color: #778aab;
   }
+
   75% {
     background-color: #bcaaaa;
   }
+
   100% {
     background-color: #ddbb98;
   }

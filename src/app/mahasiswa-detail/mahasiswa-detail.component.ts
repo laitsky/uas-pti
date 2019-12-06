@@ -11,7 +11,6 @@ import { ActivatedRoute } from "@angular/router";
 export class MahasiswaDetailComponent implements OnInit {
   public mahasiswa: MahasiswaResult;
   public currentNIM: string;
-
   constructor(
     private pelayan: PelayanApiService,
     private route: ActivatedRoute
