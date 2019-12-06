@@ -2,6 +2,7 @@ import { Component, OnInit } from "@angular/core";
 import { UserProfile } from "../_shared/models/user-profile";
 import * as jwt_decode from "jwt-decode";
 import { PelayanApiService } from "../_shared/services/pelayan-api.service";
+
 @Component({
   selector: "app-home",
   templateUrl: "./home.component.html",
@@ -22,5 +23,7 @@ export class HomeComponent implements OnInit {
       result => (this.user = result),
       error => console.log(error)
     );
+
+    
   }
 }
