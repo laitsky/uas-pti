@@ -8,6 +8,7 @@ import { ProfilKelompokComponent } from "./profil-kelompok/profil-kelompok.compo
 import { ErrorPageComponent } from "./error-page/error-page.component";
 import { MahasiswaListTableComponent } from "./mahasiswa-list-table/mahasiswa-list-table.component";
 import { SignUpComponent } from './sign-up/sign-up.component';
+import { KelompokMahasiswaComponent } from './kelompok-mahasiswa/kelompok-mahasiswa.component';
 
 const routes: Routes = [
   {
@@ -46,6 +47,10 @@ const routes: Routes = [
   {
     path: "profil-kelompok",
     component: ProfilKelompokComponent
+  },
+  {
+    path: "kelompok-mahasiswa",
+    component: KelompokMahasiswaComponent
   },
   {
     path: "404",

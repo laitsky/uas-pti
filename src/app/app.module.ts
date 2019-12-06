@@ -17,6 +17,7 @@ import { FormsModule } from '@angular/forms';
 import { MahasiswaListTableComponent } from './mahasiswa-list-table/mahasiswa-list-table.component';
 import { MahasiswaHeaderComponent } from './_shared/components/mahasiswa-header/mahasiswa-header.component';
 import { SignUpComponent } from './sign-up/sign-up.component';
+import { KelompokMahasiswaComponent } from './kelompok-mahasiswa/kelompok-mahasiswa.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -31,6 +32,7 @@ import { SignUpComponent } from './sign-up/sign-up.component';
     MahasiswaListTableComponent,
     MahasiswaHeaderComponent,
     SignUpComponent,
+    KelompokMahasiswaComponent,
   ],
   imports: [
     BrowserModule,

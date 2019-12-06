@@ -1,0 +1,16 @@
+<h2 class="text-center text-dark">KELOMPOK</h2>
+<table class="table table-hover table-striped">
+      <thead>
+            <tr>
+                  <th scope="col">Nama</th>
+                  <th scope="col">NIM</th>
+            </tr>
+      </thead>
+      <tbody>
+            <tr *ngFor="let mhs of mahasiswa.result.mahasiswa">
+                  <td>{{ mhs.nama_lengkap }}</td>
+                  <td>{{ mhs.nim }}</td>
+                  <td><button onclick="AddToKelompok">Tambah Kelompok</button></td>
+            </tr>
+      </tbody>
+</table>
