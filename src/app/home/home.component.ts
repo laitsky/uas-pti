@@ -1,15 +1,29 @@
-import { Component, OnInit } from '@angular/core';
-
+import { Component, OnInit } from "@angular/core";
+import { UserProfile } from "../_shared/models/user-profile";
+import * as jwt_decode from "jwt-decode";
+import { PelayanApiService } from "../_shared/services/pelayan-api.service";
 @Component({
-  selector: 'app-home',
-  templateUrl: './home.component.html',
-  styleUrls: ['./home.component.css']
+  selector: "app-home",
+  templateUrl: "./home.component.html",
+  styleUrls: ["./home.component.css"]
 })
 export class HomeComponent implements OnInit {
-
-  constructor() { }
+  public user: UserProfile;
+  public currUsername: string;
+  constructor(private pelayan: PelayanApiService) {}
 
   ngOnInit() {
+    let bearerToken = localStorage.getItem("uas-pti-token");
+    let decodedBT = jwt_decode(bearerToken);
+    let username = decodedBT.user.user_name;
+    console.log(username);
+    this.currUsername = username;
+    this.pelayan.getLoginUsername(this.currUsername).subscribe(
+      result => {
+        this.user = result;
+        console.log(this.user);
+      },
+      error => console.log(error)
+    );
   }
-
 }

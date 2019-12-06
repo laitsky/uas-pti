@@ -48,7 +48,7 @@ export class SignUpComponent implements OnInit {
       )
       .subscribe(
         response => {
-          if (response["token"] != null) {
+          if (response["token"]) {
             localStorage.setItem("uas-pti-token", response["token"]);
             this.router.navigate(["/login"]);
           }

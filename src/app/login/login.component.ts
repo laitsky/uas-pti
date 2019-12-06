@@ -14,9 +14,8 @@ export class LoginComponent implements OnInit {
   password: string;
 
   httpOptions = {
-    headers: new HttpHeaders({ "Content-Type": "application/json " })
+    headers: new HttpHeaders({ "Content-Type": "application/json" })
   };
-
   constructor(private http: HttpClient, private router: Router) {}
 
   ngOnInit() {
@@ -35,7 +34,7 @@ export class LoginComponent implements OnInit {
       )
       .subscribe(
         response => {
-          if (response["token"] != null) {
+          if (response["token"]) {
             localStorage.setItem("uas-pti-token", response["token"]);
             this.router.navigate(["/home"]);
           }

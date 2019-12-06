@@ -21,6 +21,7 @@ export class MahasiswaDetailComponent implements OnInit {
     this.pelayan.getMahasiswaByNIM(this.currentNIM).subscribe(
       result => {
         this.mahasiswa = result;
+        console.log(this.mahasiswa);
       },
       error => console.log(error)
     );

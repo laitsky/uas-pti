@@ -3,14 +3,14 @@ export interface MahasiswaResult {
     result: {
         alamat: string;
         angkatan: string;
-        created_at: string;
+        created_at: number;
         email: string;
         foto: string;
-        id: string;
+        id: number;
         nama_lengkap: string;
         nim: string;
         prodi: string;
         tanggal_lahir: string;
-        updated_at: string;
+        updated_at: number;
     };
 }
