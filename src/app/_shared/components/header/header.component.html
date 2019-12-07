@@ -1,6 +1,6 @@
 <div class="container-fluid m-0 p-0">
   <nav class="navbar navbar-expand-lg navbar-dark bg-primary py-2 px-5">
-    <a class="navbar-brand" href="#" style="color: white;">Mahasiswa API</a>
+    <a class="navbar-brand" href="/home" style="color: white;">Mahasiswa API</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
       aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
@@ -9,22 +9,19 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav mr-auto">
         <li class="nav-item">
-          <a class="nav-link text-white" href="/home">Beranda</a>
-        </li>
-        <li class="nav-item">
           <a class="nav-link text-white" href="/mahasiswa">Daftar Mahasiswa</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link text-white" href="/profil-kelompok">Profil Kelompok</a>
+          <a class="nav-link text-white" href="/new-mahasiswa">Tambah Mahasiswa Baru</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link text-white" href="/new-mahasiswa">Tambah Mahasiswa Baru</a>
+          <a class="nav-link text-white" href="/profil-kelompok">Profil Kelompok</a>
         </li>
       </ul>
       <form class="form-inline my-2 my-lg-0">
         <!--<input class="form-control mr-sm-2" type="search" placeholder="Cari..." aria-label="Search">-->
         <button id="logout-btn" class="btn my-2 my-sm-0 text-white" (click)="logout()">LOGOUT</button>
-    </form>
+      </form>
     </div>
   </nav>
 </div>
