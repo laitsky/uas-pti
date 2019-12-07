@@ -9,6 +9,7 @@ import { ErrorPageComponent } from "./error-page/error-page.component";
 import { MahasiswaListTableComponent } from "./mahasiswa-list-table/mahasiswa-list-table.component";
 import { SignUpComponent } from './sign-up/sign-up.component';
 import { NewMahasiswaComponent } from './new-mahasiswa/new-mahasiswa.component';
+import { AuthGuardService as AuthGuard } from './_shared/guards/auth-guard.service';
 
 const routes: Routes = [
   {
@@ -18,7 +19,8 @@ const routes: Routes = [
   },
   {
     path: "home",
-    component: HomeComponent
+    component: HomeComponent,
+    canActivate: [AuthGuard]
   },
   {
     path: "login",
@@ -30,27 +32,33 @@ const routes: Routes = [
   },
   {
     path: "mahasiswa",
-    component: MahasiswaListComponent
+    component: MahasiswaListComponent,
+    canActivate: [AuthGuard]
   },
   {
     path: "mahasiswa-tabel",
-    component: MahasiswaListTableComponent
+    component: MahasiswaListTableComponent,
+    canActivate: [AuthGuard]
   },
   {
     path: "new-mahasiswa",
-    component: NewMahasiswaComponent
+    component: NewMahasiswaComponent,
+    canActivate: [AuthGuard]
   },
   {
     path: "mahasiswa-tabel/:nim",
-    redirectTo: "/mahasiswa/:nim"
+    redirectTo: "/mahasiswa/:nim",
+    canActivate: [AuthGuard]
   },
   {
     path: "mahasiswa/:nim",
-    component: MahasiswaDetailComponent
+    component: MahasiswaDetailComponent,
+    canActivate: [AuthGuard]
   },
   {
     path: "profil-kelompok",
-    component: ProfilKelompokComponent
+    component: ProfilKelompokComponent,
+    canActivate: [AuthGuard]
   },
   {
     path: "404",
