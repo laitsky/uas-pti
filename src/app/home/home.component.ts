@@ -14,7 +14,7 @@ export class HomeComponent implements OnInit {
   constructor(private pelayan: PelayanApiService) {}
 
   ngOnInit() {
-    let bearerToken = localStorage.getItem("uas-pti-token");
+    let bearerToken = localStorage.getItem("token");
     let decodedBT = jwt_decode(bearerToken);
     let username = decodedBT.user.user_name;
     console.log(username);

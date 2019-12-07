@@ -12,7 +12,7 @@ export class HeaderComponent implements OnInit {
   ngOnInit() {
   }
   logout(): void {
-    localStorage.removeItem('uas-pti-token');
+    localStorage.removeItem('token');
     this.router.navigate(['/login']);
   }
 }

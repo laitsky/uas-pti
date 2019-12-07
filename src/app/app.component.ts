@@ -7,7 +7,7 @@ import {transition, trigger, query, style, animate } from '@angular/animations';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css'],
   animations: [
-    trigger('myAnimation', [
+    trigger('routerAnimation', [
       transition('* => *', [
         query(
           ':enter',
