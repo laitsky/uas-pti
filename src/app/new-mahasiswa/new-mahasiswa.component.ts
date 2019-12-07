@@ -48,6 +48,16 @@ export class NewMahasiswaComponent implements OnInit {
       },
       this.httpOptions
       )
-      .subscribe();
+      .subscribe(response => {
+        if (response) {
+          alert("Data berhasil dimasukkan!");
+          console.log(response);
+        }
+      }, 
+      error => {
+        alert(error.error.info);
+        console.log(error);
+      }
+      );
   }
 }
