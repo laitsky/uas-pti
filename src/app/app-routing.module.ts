@@ -10,6 +10,7 @@ import { MahasiswaListTableComponent } from "./mahasiswa-list-table/mahasiswa-li
 import { SignUpComponent } from './sign-up/sign-up.component';
 import { NewMahasiswaComponent } from './new-mahasiswa/new-mahasiswa.component';
 import { AuthGuardService as AuthGuard } from './_shared/guards/auth-guard.service';
+import { ProfilComponent } from './profil/profil.component';
 
 const routes: Routes = [
   {
@@ -58,6 +59,11 @@ const routes: Routes = [
   {
     path: "profil-kelompok",
     component: ProfilKelompokComponent,
+    canActivate: [AuthGuard]
+  },
+  {
+    path: "profil",
+    component: ProfilComponent,
     canActivate: [AuthGuard]
   },
   {
