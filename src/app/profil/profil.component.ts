@@ -1,9 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { UserProfile } from "../_shared/models/user-profile";
-import * as jwt_decode from "jwt-decode";
 import { PelayanApiService } from "../_shared/services/pelayan-api.service";
 import { HttpHeaders, HttpClient } from '@angular/common/http';
-
+import * as jwt_decode from "jwt-decode";
 @Component({
   selector: 'app-profil',
   templateUrl: './profil.component.html',
