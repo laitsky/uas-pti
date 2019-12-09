@@ -1,0 +1,10 @@
+<div *ngIf="user">
+  <div id="profil-update-alert" role="alert"></div>
+  <h1>{{user.result.nama_lengkap}}</h1>
+  <div>
+    <label>nama:
+      <input [(ngModel)]="user.result.nama_lengkap" placeholder="nama lengkap">
+    </label>
+    <button (click)="save()">Simpan</button>
+  </div>
+</div>

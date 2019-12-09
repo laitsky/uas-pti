@@ -18,6 +18,8 @@ import { MahasiswaListTableComponent } from './mahasiswa-list-table/mahasiswa-li
 import { MahasiswaHeaderComponent } from './_shared/components/mahasiswa-header/mahasiswa-header.component';
 import { SignUpComponent } from './sign-up/sign-up.component';
 import { NewMahasiswaComponent } from './new-mahasiswa/new-mahasiswa.component';
+import { AuthGuardService } from './_shared/guards/auth-guard.service';
+import { ProfilComponent } from './profil/profil.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -33,6 +35,7 @@ import { NewMahasiswaComponent } from './new-mahasiswa/new-mahasiswa.component';
     MahasiswaHeaderComponent,
     SignUpComponent,
     NewMahasiswaComponent,
+    ProfilComponent
   ],
   imports: [
     BrowserModule,
@@ -41,7 +44,7 @@ import { NewMahasiswaComponent } from './new-mahasiswa/new-mahasiswa.component';
     BrowserAnimationsModule,
     FormsModule
   ],
-  providers: [],
+  providers: [AuthGuardService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
