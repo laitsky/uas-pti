@@ -22,7 +22,7 @@ export class NewMahasiswaComponent implements OnInit {
   httpOptions = {
     headers: new HttpHeaders({
       "Content-Type": "application/json",
-      "Authorization": "Bearer " + localStorage.getItem("token")
+      Authorization: "Bearer " + localStorage.getItem("token")
     })
   };
 
@@ -49,12 +49,14 @@ export class NewMahasiswaComponent implements OnInit {
       )
       .subscribe(
         response => {
-          alert("Data berhasil dimasukkan!");
-          console.log(response);
+          $("#new-mhs-alert")
+            .addClass("alert alert-success")
+            .text(response["info"]);
         },
         error => {
-          $("#new-mhs-alert").addClass("alert alert-danger").text(error.error.info);
-          console.log(error);
+          $("#new-mhs-alert")
+            .addClass("alert alert-danger")
+            .text(error.error.info);
         }
       );
   }

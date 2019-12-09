@@ -1,12 +1,13 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit } from "@angular/core";
 import { UserProfile } from "../_shared/models/user-profile";
 import { PelayanApiService } from "../_shared/services/pelayan-api.service";
-import { HttpHeaders, HttpClient } from '@angular/common/http';
+import { HttpHeaders, HttpClient } from "@angular/common/http";
 import * as jwt_decode from "jwt-decode";
+import * as $ from "jquery";
 @Component({
-  selector: 'app-profil',
-  templateUrl: './profil.component.html',
-  styleUrls: ['./profil.component.css']
+  selector: "app-profil",
+  templateUrl: "./profil.component.html",
+  styleUrls: ["./profil.component.css"]
 })
 export class ProfilComponent implements OnInit {
   nama_lengkap: string;
@@ -17,10 +18,10 @@ export class ProfilComponent implements OnInit {
   httpOptions = {
     headers: new HttpHeaders({
       "Content-Type": "application/json",
-      "Authorization": "Bearer " + localStorage.getItem("token")
+      Authorization: "Bearer " + localStorage.getItem("token")
     })
   };
-  constructor(private http: HttpClient, private pelayan: PelayanApiService) { }
+  constructor(private http: HttpClient, private pelayan: PelayanApiService) {}
 
   ngOnInit() {
     let bearerToken = localStorage.getItem("token");
@@ -45,7 +46,16 @@ export class ProfilComponent implements OnInit {
         this.httpOptions
       )
       .subscribe(
-        response => console.log(response), error => console.log(error)
+        response => {
+          $("#profil-update-alert")
+            .addClass("alert alert-success")
+            .text(response["info"]);
+        },
+        error => {
+          $("#profil-update-alert")
+          .addClass("alert alert-danger")
+          .text(error.error.info);
+        }
       );
   }
 }
