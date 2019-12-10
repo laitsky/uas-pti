@@ -1,14 +1,16 @@
-body {
-  margin: 0;
-  font: normal 75% Arial, Helvetica, sans-serif;
-}
-
-
 canvas {
   display: block;
 }
 
+form h1 {
+  font-family: "Quicksand", sans-serif;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 0.25em;
+  padding-bottom: 0.25em;
+}
 #particles-js {
+  overflow: hidden;
   color: #373737;
   position: absolute;
   width: 100%;
