@@ -10,7 +10,11 @@ import * as $ from "jquery";
   styleUrls: ["./profil.component.css"]
 })
 export class ProfilComponent implements OnInit {
+  updateUrl: string = "https://umn-pti2019.herokuapp.com/api/update";
   nama_lengkap: string;
+  alamat: string;
+  tanggal_lahir: string;
+  password: string;
 
   public user: UserProfile;
   public currUsername: string;
@@ -27,19 +31,17 @@ export class ProfilComponent implements OnInit {
     let bearerToken = localStorage.getItem("token");
     let decodedBT = jwt_decode(bearerToken);
     let username = decodedBT.user.user_name;
-    console.log(decodedBT);
-    console.log(username);
     this.currUsername = username;
     this.pelayan.getLoginUsername(this.currUsername).subscribe(
-      result => (this.user = result),
-      error => console.log(error)
+      result => {(this.user = result); console.log(this.user.result)},
+      error => alert(error.error.info)
     );
   }
 
   save() {
     this.http
       .put(
-        "https://umn-pti2019.herokuapp.com/api/update",
+        this.updateUrl,
         {
           nama_lengkap: this.user.result.nama_lengkap
         },

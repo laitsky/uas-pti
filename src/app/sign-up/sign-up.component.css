@@ -1,25 +1,29 @@
 form {
-  padding-left: 28%;
-  padding-right: 28%;
-}
-
-.btn-submit {
-  
-}
-
-body {
-  margin: 0;
-  font: normal 75% Arial, Helvetica, sans-serif;
+  padding-left: 30%;
+  padding-right: 30%;
 }
 
 #form-layer {
-    color: #373737;
+  font-family: 'IBM Plex Sans', sans-serif;
+  color: #373737;
   border-radius: 5px;
   box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
   padding: 2em;
   background-color: rgba(255, 255, 255, 0.3);
 }
-
+#form-layer h1 {
+  font-family: 'Quicksand', sans-serif;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 0.45em;
+}
+div.form-group {
+  padding-top: 0.25em;
+  padding-bottom: 0.25em;
+}
+#form-layer label {
+  display: none;
+}
 #form-layer:hover {
   background-color: rgba(255, 255, 255, 0.7);
   transition: 0.3s;
@@ -40,8 +44,6 @@ body {
   background-size: cover;
   background-position: 50% 50%;
 }
-
-
 
 @keyframes warnaDinamis {
   0% {
