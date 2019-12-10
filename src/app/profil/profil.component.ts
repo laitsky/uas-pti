@@ -43,7 +43,7 @@ export class ProfilComponent implements OnInit {
       .put(
         this.updateUrl,
         {
-          nama_lengkap: this.user.result.nama_lengkap
+          nama_lengkap: $("#nama-lengkap").val()
         },
         this.httpOptions
       )
@@ -52,6 +52,7 @@ export class ProfilComponent implements OnInit {
           $("#profil-update-alert")
             .addClass("alert alert-success")
             .text(response["info"]);
+          setTimeout(() => window.location.reload(), 1500);
         },
         error => {
           $("#profil-update-alert")
