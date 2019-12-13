@@ -19,7 +19,7 @@
         </div>
       </div>
     </div>
-    <div class="col-6" *ngFor="let mhs of mahasiswa.result.mahasiswa | filter : 'nama_lengkap': searchText">
+    <div class="col-6" *ngFor="let mhs of mahasiswa.result.mahasiswa | filter : 'nim,nama_lengkap': searchText">
       <div id="mahasiswa-card" class="media my-2 border rounded-lg card-effect bg-light mx-5"
         routerLink="./{{ mhs.nim }}">
         <img class="mr-3 img-fluid rounded img-thumbnail" src="{{ mhs.foto }}" alt="Foto profil" />

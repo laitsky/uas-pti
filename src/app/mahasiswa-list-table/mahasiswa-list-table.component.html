@@ -26,7 +26,7 @@
           </tr>
         </thead>
         <tbody *ngIf="mahasiswa">
-          <tr *ngFor="let mhs of mahasiswa.result.mahasiswa | filter : 'nama_lengkap': searchText" routerLink="./{{mhs.nim}}">
+          <tr *ngFor="let mhs of mahasiswa.result.mahasiswa | filter : 'nim,nama_lengkap': searchText" routerLink="./{{mhs.nim}}">
             <th scope="row" class="text-center">000000{{ mhs.nim }}</th>
             <td class="text-center">{{ mhs.nama_lengkap }} (ID: {{ mhs.id }})</td>
           </tr>
