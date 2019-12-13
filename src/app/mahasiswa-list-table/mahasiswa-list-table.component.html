@@ -1,6 +1,7 @@
 <div id="mhs-table-view">
   <div class="container table-responsive">
     <div class="w-75 mx-auto">
+      <input type="text" [(ngModel)]="searchText" placeholder="Search here" />
       <div class="dropdown my-3 float-right">
         <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown"
           aria-haspopup="true" aria-expanded="false">
@@ -25,7 +26,7 @@
           </tr>
         </thead>
         <tbody *ngIf="mahasiswa">
-          <tr *ngFor="let mhs of mahasiswa.result.mahasiswa" routerLink="./{{mhs.nim}}">
+          <tr *ngFor="let mhs of mahasiswa.result.mahasiswa | filter : 'nama_lengkap': searchText" routerLink="./{{mhs.nim}}">
             <th scope="row" class="text-center">000000{{ mhs.nim }}</th>
             <td class="text-center">{{ mhs.nama_lengkap }} (ID: {{ mhs.id }})</td>
           </tr>
