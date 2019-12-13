@@ -1,0 +1,14 @@
+<div class="p-5 m-5" *ngIf="user">
+  <div id="profil-update-alert" role="alert"></div>
+  <h1>{{user.result.nama_lengkap}}</h1>
+  <div>
+    <form>
+      <div class="form-group">
+        <label>nama:
+          <input class="form-control" id="nama-lengkap" placeholder="nama lengkap" value={{user.result.nama_lengkap}}>
+        </label>
+      </div>
+    </form>
+    <button class="btn btn-primary" (click)="save()">Simpan</button>
+  </div>
+</div>

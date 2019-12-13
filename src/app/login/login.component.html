@@ -1,4 +1,4 @@
-<div id="particles-js">
+<div id="particles-js" class="m-0 p-0">
   <div id="login-form">
     <form>
       <h1 class="mb-4">Masuk</h1>
@@ -10,8 +10,12 @@
         <input type="password" class="form-control" id="password" [(ngModel)]="password" placeholder="Password"
           name="password">
       </div>
+      <div class="form-check pb-3 mt-n2">
+        <input type="checkbox" id="rm-checkbox" class="form-check-input" checked>
+        <label for="checkbox" class="form-check-label">Remember me</label>
+      </div>
       <button class="btn btn-lg btn-block btn-primary" (click)="login()">Login</button>
-      <button class="btn btn-lg btn-block btn-outline-primary" routerLink="/signup">Sign Up</button>
+      <input type="button" class="btn btn-lg btn-block btn-outline-primary" routerLink="/signup" value="Sign Up">
     </form>
   </div>
 

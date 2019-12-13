@@ -1,6 +1,8 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-
+import { LoadingBarModule } from '@ngx-loading-bar/core';
+import { LoadingBarHttpClientModule } from '@ngx-loading-bar/http-client';
+import { LoadingBarRouterModule } from '@ngx-loading-bar/router';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
@@ -17,6 +19,9 @@ import { FormsModule } from '@angular/forms';
 import { MahasiswaListTableComponent } from './mahasiswa-list-table/mahasiswa-list-table.component';
 import { MahasiswaHeaderComponent } from './_shared/components/mahasiswa-header/mahasiswa-header.component';
 import { SignUpComponent } from './sign-up/sign-up.component';
+import { NewMahasiswaComponent } from './new-mahasiswa/new-mahasiswa.component';
+import { AuthGuardService } from './_shared/guards/auth-guard.service';
+import { ProfilComponent } from './profil/profil.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -31,15 +36,20 @@ import { SignUpComponent } from './sign-up/sign-up.component';
     MahasiswaListTableComponent,
     MahasiswaHeaderComponent,
     SignUpComponent,
+    NewMahasiswaComponent,
+    ProfilComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
     BrowserAnimationsModule,
-    FormsModule
+    FormsModule,
+    LoadingBarHttpClientModule,
+    LoadingBarModule,
+    LoadingBarRouterModule
   ],
-  providers: [],
+  providers: [AuthGuardService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

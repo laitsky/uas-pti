@@ -3,6 +3,7 @@ import { FormBuilder, FormsModule } from "@angular/forms";
 import { HttpClient, HttpHeaders } from "@angular/common/http";
 import { Router } from "@angular/router";
 import { SHA512 } from "crypto-js";
+import * as $ from "jquery";
 declare var particlesJS: any;
 @Component({
   selector: "app-login",
@@ -12,6 +13,7 @@ declare var particlesJS: any;
 export class LoginComponent implements OnInit {
   username: string;
   password: string;
+  remember_me: boolean;
 
   httpOptions = {
     headers: new HttpHeaders({ "Content-Type": "application/json" })
@@ -20,6 +22,8 @@ export class LoginComponent implements OnInit {
 
   ngOnInit() {
     particlesJS.load("particles-js", "assets/LoginParticles.json", null);
+    
+    console.log($("#rm-checkbox").is(":checked"));
   }
 
   login() {
@@ -28,14 +32,15 @@ export class LoginComponent implements OnInit {
         "http://umn-pti2019.herokuapp.com/api/login",
         {
           user_name: this.username,
-          password: SHA512(this.password).toString()
+          password: SHA512(this.password).toString(),
+          remember_me: $("#rm-checkbox").is(":checked") ? this.remember_me = true : this.remember_me = false
         },
         this.httpOptions
       )
       .subscribe(
         response => {
           if (response["token"]) {
-            localStorage.setItem("uas-pti-token", response["token"]);
+            localStorage.setItem("token", response["token"]);
             this.router.navigate(["/home"]);
           }
         },
