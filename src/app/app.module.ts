@@ -11,7 +11,7 @@ import { HeaderComponent } from './_shared/components/header/header.component';
 import { FooterComponent } from './_shared/components/footer/footer.component';
 import { MahasiswaListComponent } from './mahasiswa-list/mahasiswa-list.component';
 import { MahasiswaDetailComponent } from './mahasiswa-detail/mahasiswa-detail.component';
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FormsModule } from '@angular/forms';
 import { MahasiswaListTableComponent } from './mahasiswa-list-table/mahasiswa-list-table.component';
@@ -20,6 +20,7 @@ import { SignUpComponent } from './sign-up/sign-up.component';
 import { NewMahasiswaComponent } from './new-mahasiswa/new-mahasiswa.component';
 import { AuthGuardService } from './_shared/guards/auth-guard.service';
 import { ProfilComponent } from './profil/profil.component';
+import { TokenInterceptor } from './_shared/interceptor/token.interceptor';
 @NgModule({
   declarations: [
     AppComponent,
@@ -44,7 +45,12 @@ import { ProfilComponent } from './profil/profil.component';
     BrowserAnimationsModule,
     FormsModule
   ],
-  providers: [AuthGuardService],
+  providers: [AuthGuardService, {
+    provide: HTTP_INTERCEPTORS,
+    useClass: TokenInterceptor,
+    multi: true
+  }], 
+
   bootstrap: [AppComponent]
 })
 export class AppModule { }
