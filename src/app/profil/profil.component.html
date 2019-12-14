@@ -1,14 +1,36 @@
 <div class="p-5 m-5" *ngIf="user">
   <div id="profil-update-alert" role="alert"></div>
+  <div *ngIf="z123==true">HALO</div>
   <h1>{{user.result.nama_lengkap}}</h1>
   <div>
     <form>
+      <button (click)="edit()">Edit</button>
       <div class="form-group">
-        <label>nama:
-          <input class="form-control" id="nama-lengkap" placeholder="nama lengkap" value={{user.result.nama_lengkap}}>
+        <label>Nama Lengkap:
+          <input disabled class="form-control" id="nama-lengkap" placeholder="Nama Lengkap" value={{user.result.nama_lengkap}}>
         </label>
       </div>
+      <div class="form-group">
+        <label>Alamat:
+          <input disabled class="form-control" id="alamat" placeholder="Alamat" value={{user.result.alamat}}>
+        </label>
+      </div>
+      <div class="form-group">
+        <label>Tanggal Lahir:
+          <input disabled type="date" class="form-control" id="tanggal-lahir" value={{user.result.tanggal_lahir}}>
+        </label>
+      </div>
+      <div class="form-group">
+        <label>Foto:
+          <input disabled class="form-control" id="foto" value={{user.result.foto}}>
+        </label>
+      </div>
+      <!--<div class="form-group">
+        <label>Password baru:
+          <input disabled type="password" class="form-control" id="password">
+        </label>
+      </div>-->
     </form>
-    <button class="btn btn-primary" (click)="save()">Simpan</button>
+    <button disabled class="btn btn-primary" (click)="save()">Simpan</button>
   </div>
 </div>

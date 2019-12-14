@@ -1,7 +1,23 @@
 <div class="container-fluid" *ngIf="mahasiswa">
   <img src="{{mahasiswa.result.foto}}" class="img-fluid mx-auto img-thumbnail d-block mt-5 mb-3" id="foto-profil">
+  <div class="text-center">
+    <!-- Button trigger modal -->
+    <button type="button" class="btn btn-sm btn-primary" data-toggle="modal" data-target="#updateMhsModal">
+      Edit
+    </button>
+  </div>
   <h1 class="text-center mb-2">{{mahasiswa.result.nama_lengkap}}</h1>
   <h3 class="text-center mb-5">000000{{mahasiswa.result.nim}}</h3>
+  <div class="row mb-4 pb-4 mx-5 px-5">
+    <div class="col-md-6 text-center">
+      <h5>Tanggal Lahir:</h5>
+      <h5>{{mahasiswa.result.tanggal_lahir | date:'longDate'}}</h5>
+    </div>
+    <div class="col-md-6 text-center">
+      <h5>Program Studi:</h5>
+      <h5>{{mahasiswa.result.prodi}} - {{mahasiswa.result.angkatan}}</h5>
+    </div>
+  </div>
   <div class="row mb-4 pb-4 mx-5 px-5">
     <div class="col-md-4 text-center">
       <h5>Email:</h5>
@@ -10,11 +26,69 @@
     <div class="col-md-4 text-center">
       <h5>Created at:</h5>
       <h5>{{mahasiswa.result.created_at | date:'medium'}}</h5>
-
     </div>
     <div class="col-md-4 text-center">
       <h5>Updated at:</h5>
       <h5>{{mahasiswa.result.updated_at | date:'medium'}}</h5>
+    </div>
+  </div>
+
+
+  <!-- Modal -->
+  <div class="modal fade" id="updateMhsModal" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Perbarui detail mahasiswa</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <form>
+            <div class="form-group">
+              <label>Nama Lengkap:
+                <input class="form-control" id="nama-lengkap" placeholder="Nama Lengkap"
+                  value={{mahasiswa.result.nama_lengkap}}>
+              </label>
+            </div>
+            <div class="form-group">
+              <label>Alamat:
+                <input class="form-control" id="alamat" placeholder="Alamat" value={{mahasiswa.result.alamat}}>
+              </label>
+            </div>
+            <div class="form-group">
+              <label>Tanggal Lahir:
+                <input type="date" class="form-control" id="tanggal-lahir" value={{mahasiswa.result.tanggal_lahir}}>
+              </label>
+            </div>
+            <div class="form-group">
+              <label>Telepon:
+                <input class="form-control" id="telepon" placeholder="Nomor Telepon" value={{mahasiswa.result.telepon}}>
+              </label>
+            </div>
+            <div class="form-group">
+              <label>Foto:
+                <input class="form-control" id="foto" placeholder="Foto" value={{mahasiswa.result.foto}}>
+              </label>
+            </div>
+            <div class="form-group">
+              <label>Prodi:
+                <input class="form-control" id="prodi" placeholder="Prodi" value={{mahasiswa.result.prodi}}>
+              </label>
+            </div>
+            <div class="form-group">
+              <label>Angkatan:
+                <input class="form-control" id="angkatan" placeholder="Angkatan" value={{mahasiswa.result.angkatan}}>
+              </label>
+            </div>
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Tutup</button>
+          <button type="button" class="btn btn-primary" (click)="save()">Simpan</button>
+        </div>
+      </div>
     </div>
   </div>
 </div>
