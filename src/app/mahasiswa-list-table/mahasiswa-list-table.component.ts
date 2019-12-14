@@ -9,6 +9,7 @@ import { MahasiswaList } from "../_shared/models/mahasiswa-list";
 })
 export class MahasiswaListTableComponent implements OnInit {
   public mahasiswa: MahasiswaList;
+  searchText: any[];
   constructor(private pelayan: PelayanApiService) {}
 
   ngOnInit() {

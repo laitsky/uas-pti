@@ -8,6 +8,7 @@ import { PelayanApiService } from "../_shared/services/pelayan-api.service";
 })
 export class MahasiswaListComponent implements OnInit {
   public mahasiswa: MahasiswaList;
+  searchText: any[];
   constructor(private pelayan: PelayanApiService) {}
 
   ngOnInit() {

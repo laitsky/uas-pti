@@ -22,6 +22,8 @@ import { SignUpComponent } from './sign-up/sign-up.component';
 import { NewMahasiswaComponent } from './new-mahasiswa/new-mahasiswa.component';
 import { AuthGuardService } from './_shared/guards/auth-guard.service';
 import { ProfilComponent } from './profil/profil.component';
+import { FilterPipe } from './_shared/search/filter.pipe';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -37,7 +39,8 @@ import { ProfilComponent } from './profil/profil.component';
     MahasiswaHeaderComponent,
     SignUpComponent,
     NewMahasiswaComponent,
-    ProfilComponent
+    ProfilComponent,
+    FilterPipe
   ],
   imports: [
     BrowserModule,

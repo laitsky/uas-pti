@@ -1,6 +1,7 @@
 <div id="content">
   <div class="row pb-5 px-5 mx-5" *ngIf="mahasiswa" id="tbl-container">
     <div class="col-12">
+      <input type="text" [(ngModel)]="searchText" placeholder="Search here" />
       <div class="dropdown mb-3">
         <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown"
           aria-haspopup="true" aria-expanded="false">
@@ -18,7 +19,7 @@
         </div>
       </div>
     </div>
-    <div class="col-6" *ngFor="let mhs of mahasiswa.result.mahasiswa">
+    <div class="col-6" *ngFor="let mhs of mahasiswa.result.mahasiswa | filter : 'nim,nama_lengkap': searchText">
       <div id="mahasiswa-card" class="media my-2 border rounded-lg card-effect bg-light mx-5"
         routerLink="./{{ mhs.nim }}">
         <img class="mr-3 img-fluid rounded img-thumbnail" src="{{ mhs.foto }}" alt="Foto profil" />
