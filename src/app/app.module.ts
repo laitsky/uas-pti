@@ -23,6 +23,8 @@ import { NewMahasiswaComponent } from './new-mahasiswa/new-mahasiswa.component';
 import { AuthGuardService } from './_shared/guards/auth-guard.service';
 import { ProfilComponent } from './profil/profil.component';
 import { FilterPipe } from './_shared/search/filter.pipe';
+import { GroupingMahasiswaComponent } from './grouping-mahasiswa/grouping-mahasiswa.component';
+import { DatePipe } from '@angular/common';
 
 @NgModule({
   declarations: [
@@ -40,7 +42,8 @@ import { FilterPipe } from './_shared/search/filter.pipe';
     SignUpComponent,
     NewMahasiswaComponent,
     ProfilComponent,
-    FilterPipe
+    FilterPipe,
+    GroupingMahasiswaComponent
   ],
   imports: [
     BrowserModule,
@@ -52,7 +55,7 @@ import { FilterPipe } from './_shared/search/filter.pipe';
     LoadingBarModule,
     LoadingBarRouterModule
   ],
-  providers: [AuthGuardService],
+  providers: [AuthGuardService, DatePipe],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

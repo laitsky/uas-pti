@@ -1,6 +1,7 @@
 import { Component, OnInit } from "@angular/core";
 import { Router } from "@angular/router";
 import { HttpClient, HttpHeaders } from "@angular/common/http";
+import { DatePipe } from "@angular/common";
 import { SHA512 } from "crypto-js";
 import * as $ from "jquery";
 @Component({
@@ -26,7 +27,11 @@ export class NewMahasiswaComponent implements OnInit {
     })
   };
 
-  constructor(private http: HttpClient, private router: Router) {}
+  constructor(
+    private http: HttpClient,
+    private router: Router,
+    private dateFormatPipe: DatePipe
+  ) {}
 
   ngOnInit() {}
 
@@ -42,7 +47,10 @@ export class NewMahasiswaComponent implements OnInit {
           telepon: this.telepon,
           alamat: this.alamat,
           prodi: this.prodi,
-          tanggal_lahir: this.tanggal_lahir,
+          tanggal_lahir: this.dateFormatPipe.transform(
+            this.tanggal_lahir,
+            "yyyy-MM-dd"
+          ),
           angkatan: this.angkatan
         },
         this.httpOptions
@@ -52,6 +60,7 @@ export class NewMahasiswaComponent implements OnInit {
           $("#new-mhs-alert")
             .addClass("alert alert-success")
             .text(response["info"]);
+          $("#form").trigger('reset');
         },
         error => {
           $("#new-mhs-alert")
