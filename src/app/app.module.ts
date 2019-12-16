@@ -15,7 +15,7 @@ import { MahasiswaListComponent } from './mahasiswa-list/mahasiswa-list.componen
 import { MahasiswaDetailComponent } from './mahasiswa-detail/mahasiswa-detail.component';
 import { HttpClientModule } from '@angular/common/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MahasiswaListTableComponent } from './mahasiswa-list-table/mahasiswa-list-table.component';
 import { MahasiswaHeaderComponent } from './_shared/components/mahasiswa-header/mahasiswa-header.component';
 import { SignUpComponent } from './sign-up/sign-up.component';
@@ -53,7 +53,8 @@ import { DatePipe } from '@angular/common';
     FormsModule,
     LoadingBarHttpClientModule,
     LoadingBarModule,
-    LoadingBarRouterModule
+    LoadingBarRouterModule,
+    ReactiveFormsModule
   ],
   providers: [AuthGuardService, DatePipe],
   bootstrap: [AppComponent]

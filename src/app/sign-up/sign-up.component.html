@@ -1,58 +1,115 @@
   <div id="particles-js"></div>
 
   <div id="signup-form" class="py-5">
-    <form>
+    <form [formGroup]="signUpForm" (ngSubmit)="signUp()">
       <div id="form-layer">
         <h1 class="pb-3">Daftar</h1>
         <div class="form-group">
           <label for="nama_lengkap">Nama Lengkap</label>
-          <input type="text" class="form-control" id="nama_lengkap" [(ngModel)]="nama_lengkap"
-            placeholder="Nama Lengkap" name="nama_lengkap">
+          <input type="text" class="form-control" id="nama_lengkap" placeholder="Nama Lengkap" 
+          name="nama_lengkap" formControlName="nama_lengkap" [ngClass]="{ 'is-invalid': submitted && f.nama_lengkap.errors }" />
+          <div *ngIf="submitted && f.nama_lengkap.errors" class="invalid-feedback">
+            <div *ngIf="f.nama_lengkap.errors.required">
+              Harap mengisi nama lengkap
+            </div>
+          </div>
         </div>
         <div class="form-group">
           <label for="user_name">Username</label>
-          <input type="text" class="form-control" id="user_name" [(ngModel)]="username" placeholder="Username"
-            name="user_name">
+          <input type="text" class="form-control" id="user_name" placeholder="Username"
+            name="user_name" formControlName="username" [ngClass]="{ 'is-invalid': submitted && f.username.errors }" />
+          <div *ngIf="submitted && f.username.errors" class="invalid-feedback">
+            <div *ngIf="f.username.errors.required">
+              Harap mengisi username
+            </div>
+          </div>
         </div>
         <div class="form-group">
           <label for="password">Password</label>
-          <input type="password" class="form-control" id="password" [(ngModel)]="password" placeholder="Password"
-            name="password">
+          <input type="password" class="form-control" id="password" placeholder="Password"
+            name="password" formControlName="password" [ngClass]="{ 'is-invalid': submitted && f.passworderrors }" />
+          <div *ngIf="submitted && f.passworderrors" class="invalid-feedback">
+            <div *ngIf="f.password.errors.required">
+              Harap mengisi password
+            </div>
+            <div *ngIf="f.password.errors.minlength">
+              Password minimal harus 8 karakter
+            </div>
+          </div>
         </div>
         <div class="form-group">
           <label for="password">Konfimrasi Password</label>
-          <input type="password" class="form-control" id="confirm-password" [(ngModel)]="password" placeholder="Password"
-            name="password">
+          <input type="password" class="form-control" id="confirm-password" placeholder="Password"
+            name="password" formControlName="confirmPassword" [ngClass]="{ 'is-invalid': submitted && f.confirmPassword.errors }" />
+          <div *ngIf="submitted && f.confirmPassword.errors" class="invalid-feedback">
+            <div *ngIf="f.confirmPassword.errors.required">
+              Harap mengisi Confirm Password
+            </div>
+            <div *ngIf="f.confirmPassword.errors.mustMatch">
+              Password harus sesuai
+            </div>
+          </div>
         </div>
         <div class="form-group">
           <label for="telepon">Telepon</label>
-          <input type="text" class="form-control" id="telepon" [(ngModel)]="telepon" placeholder="Nomor telepon"
-            name="telepon">
+          <input type="text" class="form-control" id="telepon"  placeholder="Nomor telepon"
+            name="telepon" formControlName="telepon" [ngClass]="{ 'is-invalid': submitted && f.telepon.errors }" />
+          <div *ngIf="submitted && f.telepon.errors" class="invalid-feedback">
+            <div *ngIf="f.telepon.errors.required">
+              Harap mengisi nomor telepon
+            </div>
+          </div>
         </div>
         <div class="form-group">
           <label for="email">Email</label>
-          <input type="email" class="form-control" id="email" [(ngModel)]="email" placeholder="Email" name="email">
+          <input type="email" class="form-control" id="email" placeholder="Email" name="email"
+          formControlName="email" [ngClass]="{ 'is-invalid': submitted && f.email.errors }" />
+          <div *ngIf="submitted && f.email.errors" class="invalid-feedback">
+            <div *ngIf="f.email.errors.required">
+              Harap mengisi email
+            </div>
+            <div *ngIf="f.email.errors.email">
+              Harap mengisi alamat email yang valid
+            </div>
+          </div>
         </div>
 
         <div class="form-group">
           <label for="alamat">Alamat</label>
-          <input type="text" class="form-control" id="alamat" [(ngModel)]="alamat" placeholder="Alamat" name="alamat">
+          <input type="text" class="form-control" id="alamat" placeholder="Alamat" name="alamat"
+          formControlName="alamat" [ngClass]="{ 'is-invalid': submitted && f.alamat.errors }" />
+          <div *ngIf="submitted && f.alamat.errors" class="invalid-feedback">
+            <div *ngIf="f.alamat.errors.required">
+              Harap mengisi alamat
+            </div>
+          </div>
         </div>
         <div class="form-group">
           <label for="tanggal_lahir">Tanggal Lahir</label>
-          <input type="date" class="form-control" id="tanggal_lahir" [(ngModel)]="tanggal_lahir" name="tanggal_lahir"
-            name="tanggal_lahir">
+          <input type="date" class="form-control" id="tanggal_lahir" name="tanggal_lahir"
+            name="tanggal_lahir" formControlName="tanggal_lahir" [ngClass]="{ 'is-invalid': submitted && f.tanggal_lahir.errors }" />
+          <div *ngIf="submitted && f.tanggal_lahir.errors" class="invalid-feedback">
+            <div *ngIf="f.tanggal_lahir.errors.required">
+              Harap mengisi tanggal lahir
+            </div>
+          </div>
         </div>
         <div class="form-group">
           <label for="foto">Foto</label>
-          <input type="text" class="form-control" id="foto" [(ngModel)]="foto" placeholder="Foto" name="foto">
+          <input type="text" class="form-control" id="foto" placeholder="Foto" name="foto"
+          formControlName="foto" [ngClass]="{ 'is-invalid': submitted && f.foto.errors }" />
+          <div *ngIf="submitted && f.foto.errors" class="invalid-feedback">
+            <div *ngIf="f.fotoerrors.required">
+              Harap mengisi Foto
+            </div>
+          </div>
         </div>
         <div class="row">
           <div class="col-md-4">
             <input type="button" class="btn btn-block btn-outline-success btn-lg" routerLink="/login" value="Back">
           </div>
           <div class="col-md-8">
-            <button class="btn btn-block btn-outline-primary btn-lg" (click)="signUp()">Sign Up!</button>
+            <button class="btn btn-block btn-outline-primary btn-lg" (click) = "signUp()" >Sign Up!</button>
           </div>
         </div>
       </div>
