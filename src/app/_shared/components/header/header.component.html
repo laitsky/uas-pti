@@ -1,31 +1,37 @@
 <div class="container-fluid m-0 p-0">
   <nav class="navbar navbar-expand-lg navbar-dark bg-primary py-2 px-5">
-    <a class="navbar-brand" href="/home" style="color: white;">Mahasiswa API</a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <a class="navbar-brand" routerLink="/home" style="color: white;">Mahasiswa API</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar"
+      aria-controls="navbart" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
 
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <div class="collapse navbar-collapse" id="navbar">
       <ul class="navbar-nav mr-auto">
         <li class="nav-item">
-          <a class="nav-link text-white" href="/mahasiswa">Daftar Mahasiswa</a>
+          <a class="nav-link text-white" routerLink="/mahasiswa">Daftar Mahasiswa</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link text-white" href="/new-mahasiswa">Tambah Mahasiswa Baru</a>
+          <a class="nav-link text-white" routerLink="/new-mahasiswa">Tambah Mahasiswa Baru</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link text-white" href="/grouping-mahasiswa">Grouping Mahasiswa</a>
+          <a class="nav-link text-white" routerLink="/grouping-mahasiswa">Grouping Mahasiswa</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link text-white" href="/profil-kelompok">Profil Kelompok</a>
+          <a class="nav-link text-white" routerLink="/profil-kelompok">Profil Kelompok</a>
         </li>
       </ul>
       <form class="form-inline my-2 my-lg-0">
-        <!--<li class="nav-item">
-          <a class="nav-link text-white" href="/profil">Profil</a>
-        </li>-->
-        <button id="logout-btn" class="btn my-2 my-sm-0 text-white" (click)="logout()">LOGOUT</button>
+        <div class="dropdown">
+          <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Akun Saya
+          </button>
+          <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+            <button class="dropdown-item" routerLink="/profil">Profil</button>
+            <button class="dropdown-item" (click)="logout()">Logout</button>
+          </div>
+        </div>
+
       </form>
     </div>
   </nav>
