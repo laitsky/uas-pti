@@ -11,6 +11,7 @@ import { SignUpComponent } from './sign-up/sign-up.component';
 import { NewMahasiswaComponent } from './new-mahasiswa/new-mahasiswa.component';
 import { AuthGuardService as AuthGuard } from './_shared/guards/auth-guard.service';
 import { ProfilComponent } from './profil/profil.component';
+import { GroupingMahasiswaComponent } from './grouping-mahasiswa/grouping-mahasiswa.component';
 
 const routes: Routes = [
   {
@@ -34,6 +35,11 @@ const routes: Routes = [
   {
     path: "mahasiswa",
     component: MahasiswaListComponent,
+    canActivate: [AuthGuard]
+  },
+  {
+    path: "grouping-mahasiswa",
+    component: GroupingMahasiswaComponent,
     canActivate: [AuthGuard]
   },
   {

@@ -1,0 +1,38 @@
+<div id="mhs-table-view">
+  <div class="container table-responsive">
+    <div class="w-75 mx-auto">
+      <table class="table table-hover my-5">
+        <thead class="thead-dark">
+          <tr>
+            <th scope="col" class="text-center">NIM</th>
+            <th scope="col" class="text-center">Nama</th>
+            <th scope="col" class="text-center">Aksi</th>
+          </tr>
+        </thead>
+        <tbody *ngIf="mahasiswa">
+          <tr *ngFor="let mhs of mahasiswa.result.mahasiswa">
+            <th scope="row" class="text-center align-middle" routerLink="./{{mhs.nim}}" >000000{{ mhs.nim }}</th>
+            <td class="text-center align-middle" routerLink="./{{mhs.nim}}">{{ mhs.nama_lengkap }} (ID: {{ mhs.id }})</td>
+            <td class="text-center"><button class="btn btn-outline-success" (click)="add(mhs.nama_lengkap, mhs.nim)">Tambah</button></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+  <div class="container table-responsive">
+      <h1>Kelompok A</h1>
+      <table class="table table-hover">
+          <thead class="thead-light">
+              <tr>
+                  <th scope="col" class="text-center">NIM</th>
+                  <th scope="col" class="text-center">Nama</th>
+              </tr>
+          </thead>
+          <tbody>
+              <tr *ngFor="let mhs of kelompokA">
+                  <th scope="row" class="text-center">{{mhs.mhs_nim}}</th>
+              </tr>
+          </tbody>
+      </table>
+  </div>
+</div>

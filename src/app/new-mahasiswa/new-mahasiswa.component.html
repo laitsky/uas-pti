@@ -1,5 +1,5 @@
 <div id="new-mahasiswa-form" class="py-5 px-5">
-  <form>
+  <form id="form">
     <div id="form-layer">
       <h1 class="pb-3">Tambah Mahasiswa Baru</h1>
       <div class="form-group">
@@ -43,7 +43,7 @@
       </div>
       <div class="form-group">
         <label for="angkatan">Angkatan</label>
-        <input type="text" class="form-control" id="angkatan" [(ngModel)]="angkatan" name="angkatan">
+        <input type="text" class="form-control" id="angkatan" [(ngModel)]="angkatan" placeholder="Masukkan angkatan" name="angkatan">
       </div>
       <button class="btn btn-block btn-outline-primary btn-lg" (click)="addNewMahasiswa()">Tambah Mahasiswa
         Baru!</button>
