@@ -17,9 +17,7 @@
   background-color: #ddd;
 }
 
-.tab button.active {
-  background-color: #ccc;
-}
+
 
 .tab-content {
   display: none;

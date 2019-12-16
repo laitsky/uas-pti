@@ -22,8 +22,6 @@ export class LoginComponent implements OnInit {
 
   ngOnInit() {
     particlesJS.load("particles-js", "assets/LoginParticles.json", null);
-    
-    console.log($("#rm-checkbox").is(":checked"));
   }
 
   login() {
@@ -33,7 +31,9 @@ export class LoginComponent implements OnInit {
         {
           user_name: this.username,
           password: SHA512(this.password).toString(),
-          remember_me: $("#rm-checkbox").is(":checked") ? this.remember_me = true : this.remember_me = false
+          remember_me: $("#rm-checkbox").is(":checked")
+            ? (this.remember_me = true)
+            : (this.remember_me = false)
         },
         this.httpOptions
       )

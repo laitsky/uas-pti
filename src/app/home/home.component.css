@@ -1,0 +1,15 @@
+#home {
+    background-image: url("../../assets/home_background.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 100vh;
+    padding: 1em;
+    color: #494949;
+}
+
+#welcome-text {
+    font-family: 'Quicksand', sans-serif;
+    padding-top: 2em;
+    font-size: 4.5em;
+}

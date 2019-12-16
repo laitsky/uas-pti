@@ -1,6 +1,5 @@
 <div class="p-5 m-5" *ngIf="user">
   <div id="profil-update-alert" role="alert"></div>
-  <div *ngIf="z123==true">HALO</div>
   <h1>{{user.result.nama_lengkap}}</h1>
   <div class="row">
     <div class="col-6">
@@ -28,18 +27,14 @@
         <button disabled class="btn btn-block btn-primary" (click)="save()">Simpan</button>
       </div>
     </div>
-    <div class="col-6">
+    <div class="col-6 mt-4">
       <form>
         <div class="form-group">
           <label>Password baru:</label>
             <input type="password" class="form-control" id="password">
         </div>
-        <div class="form-group">
-          <label>Konfirmasi Password Baru:</label>
-          <input type="password" class="form-control" id="confirm-password">
-        </div>
       </form>
-      <button class="btn btn-block btn-primary" (click)="save()">Simpan</button>
+      <button class="btn btn-block btn-primary" (click)="savePassword()">Simpan</button>
     </div>
   </div>
 </div>

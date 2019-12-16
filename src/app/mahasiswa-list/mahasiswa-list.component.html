@@ -1,7 +1,7 @@
 <div id="content">
   <div class="row pb-5 px-5 mx-5" *ngIf="mahasiswa" id="tbl-container">
     <div class="col-12">
-      <input type="text" [(ngModel)]="searchText" placeholder="Search here" />
+      <input type="text" [(ngModel)]="searchText" placeholder="Cari disini" />
       <div class="dropdown mb-3">
         <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown"
           aria-haspopup="true" aria-expanded="false">
@@ -24,8 +24,10 @@
         routerLink="./{{ mhs.nim }}">
         <img class="mr-3 img-fluid rounded img-thumbnail" src="{{ mhs.foto }}" alt="Foto profil" />
         <div class="media-body px-1 my-1">
-          <h3 class="pt-1">{{ mhs.nama_lengkap }} 
-            <span><h6 class="pt-2">(ID: {{ mhs.id }})</h6></span>
+          <h3 class="pt-1">{{ mhs.nama_lengkap }}
+            <span>
+              <h6 class="pt-2">(ID: {{ mhs.id }})</h6>
+            </span>
           </h3>
           <h5 class="pt-2">000000{{ mhs.nim }}</h5>
         </div>

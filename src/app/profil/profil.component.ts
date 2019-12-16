@@ -71,4 +71,32 @@ export class ProfilComponent implements OnInit {
         }
       );
   }
+
+  savePassword() {
+    this.http
+      .put(
+        this.updateUrl,
+        {
+          password: SHA512($("#password").val()).toString()
+          
+        },
+        this.httpOptions
+      )
+      .subscribe(
+        response => {
+          $("#profil-update-alert")
+            .addClass("alert alert-success")
+            .text(
+              response["info"] +
+                "\nHalaman akan memuat ulang dalam beberapa saat."
+            );
+          setTimeout(() => window.location.reload(), 2000);
+        },
+        error => {
+          $("#profil-update-alert")
+            .addClass("alert alert-danger")
+            .text(error.error.info);
+        }
+      );
+  }
 }

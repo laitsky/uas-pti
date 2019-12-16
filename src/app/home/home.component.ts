@@ -17,8 +17,6 @@ export class HomeComponent implements OnInit {
     let bearerToken = localStorage.getItem("token");
     let decodedBT = jwt_decode(bearerToken);
     let username = decodedBT.user.user_name;
-    console.log(decodedBT)
-    console.log(username);
     this.currUsername = username;
     this.pelayan.getLoginUsername(this.currUsername).subscribe(
       result => (this.user = result),
