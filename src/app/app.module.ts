@@ -22,7 +22,7 @@ import { SignUpComponent } from './sign-up/sign-up.component';
 import { NewMahasiswaComponent } from './new-mahasiswa/new-mahasiswa.component';
 import { AuthGuardService } from './_shared/guards/auth-guard.service';
 import { ProfilComponent } from './profil/profil.component';
-import { FilterPipe } from './_shared/search/filter.pipe';
+import { FilterPipe } from './_shared/pipes/filter.pipe';
 import { GroupingMahasiswaComponent } from './grouping-mahasiswa/grouping-mahasiswa.component';
 import { DatePipe } from '@angular/common';
 

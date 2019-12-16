@@ -41,10 +41,8 @@ export class MahasiswaDetailComponent implements OnInit {
   ngOnInit() {
     this.currentNIM = this.route.snapshot.paramMap.get("nim");
     this.pelayan.getMahasiswaByNIM(this.currentNIM).subscribe(
-      result => {
-        (this.mahasiswa = result), console.log(this.mahasiswa);
-      },
-      error => console.log(error)
+      result => (this.mahasiswa = result),
+      error => alert(error.error.info)
     );
   }
 
